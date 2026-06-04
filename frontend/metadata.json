@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Vision Secure AI",
+  "description": "An AI-powered secure visual intelligence and encrypted communication operating system featuring identity verification, real-time proctoring, global threat intelligence, and secure mission command dashboards.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

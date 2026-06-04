@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net
+    match /{document=**} { 
+      allow read, write: if false; 
+    }
+    
+    // Primitives
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+    function isSignedIn() { return request.auth != null; }
+    
+    // Validation Blueprints
+    function isValidUser() {
+      return incoming().keys().hasOnly(['email', 'createdAt']) &&
+             incoming().email is string && incoming().email.size() <= 200 &&
+             incoming().createdAt == request.time;
+    }
+    
+    match /users/{userId} {
+      allow read: if isSignedIn() && request.auth.uid == userId;
+      allow create: if isSignedIn() && request.auth.uid == userId && isValidUser();
+      allow update: if (
+        isSignedIn() && request.auth.uid == userId &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['email']) &&
+        incoming().email is string && incoming().email.size() <= 200 &&
+        incoming().createdAt == existing().createdAt
+      );
+      allow delete: if false;
+    }
+  }
+}

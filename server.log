@@ -1,0 +1,50 @@
+[2026-05-28 17:52:30.809 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
+[2026-05-28 17:52:30.810 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
+[2026-05-28 17:52:30.811 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
+[2026-05-28 17:52:30.814 +0530] [32mINFO[39m (24360): [36mDatabase connected[39m
+[2026-05-28 17:52:30.816 +0530] [32mINFO[39m (24360): [36mHTTP server listening[39m [90m{"port":5000,"env":"development"}[39m
+[2026-05-28 17:52:50.640 +0530] [32mINFO[39m (24360): [36mHTTP request completed[39m [90m{"requestId":"f18bba2f-ed5e-4490-b5e1-bd75afd05bec","method":"GET","path":"/health","statusCode":200,"durationMs":13}[39m
+[2026-05-28 17:58:10.142 +0530] [32mINFO[39m (24360): [36mHTTP request completed[39m [90m{"requestId":"959a7536-e0d0-410e-9474-c9d683d96d0c","method":"GET","path":"/health","statusCode":200,"durationMs":3}[39m
+[2026-05-28 18:14:25.403 +0530] [32mINFO[39m (24360): [36mHTTP request completed[39m [90m{"requestId":"f33dbb72-bff0-4fb6-9959-9ba9520ec287","method":"GET","path":"/health","statusCode":200,"durationMs":8}[39m
+[2026-05-28 18:14:25.565 +0530] [33mWARN[39m (24360): [36mHTTP request completed[39m [90m{"requestId":"16cc9454-8c3c-4d21-85e1-e48f6298f1de","method":"GET","path":"/","statusCode":404,"durationMs":5}[39m
+[2026-05-28 18:14:26.490 +0530] [33mWARN[39m (24360): [36mHTTP request completed[39m [90m{"requestId":"648c325d-ae97-40dc-b519-f6c2143b2636","method":"GET","path":"/favicon.ico","statusCode":404,"durationMs":7}[39m
+[2026-05-30 07:38:07.175 +0530] [31mERROR[39m (24360): [36mRedis error[39m 
+    err: {
+      "type": "Error",
+      "message": "read ECONNRESET",
+      "stack":
+          Error: read ECONNRESET
+              at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+      "errno": -4077,
+      "code": "ECONNRESET",
+      "syscall": "read"
+    }
+[2026-05-30 07:38:07.191 +0530] [31mERROR[39m (24360): [36mRedis error[39m 
+    err: {
+      "type": "Error",
+      "message": "read ECONNRESET",
+      "stack":
+          Error: read ECONNRESET
+              at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+      "errno": -4077,
+      "code": "ECONNRESET",
+      "syscall": "read"
+    }
+[2026-05-30 07:38:07.193 +0530] [31mERROR[39m (24360): [36mRedis error[39m 
+    err: {
+      "type": "Error",
+      "message": "read ECONNRESET",
+      "stack":
+          Error: read ECONNRESET
+              at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+      "errno": -4077,
+      "code": "ECONNRESET",
+      "syscall": "read"
+    }
+[2026-05-30 07:38:07.208 +0530] [31mERROR[39m (24360): [36mPrisma error[39m [90m{"message":"Error in PostgreSQL connection: Error { kind: Io, cause: Some(Os { code: 10054, kind: ConnectionReset, message: \"An existing connection was forcibly closed by the remote host.\" }) }","target":"quaint::connector::postgres::native"}[39m
+[2026-05-30 07:38:07.221 +0530] [33mWARN[39m (24360): [36mRedis connection closed[39m
+[2026-05-30 07:38:07.221 +0530] [33mWARN[39m (24360): [36mRedis connection closed[39m
+[2026-05-30 07:38:07.222 +0530] [33mWARN[39m (24360): [36mRedis connection closed[39m
+[2026-05-30 07:38:07.342 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
+[2026-05-30 07:38:07.343 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
+[2026-05-30 07:38:07.345 +0530] [32mINFO[39m (24360): [36mRedis connected[39m
